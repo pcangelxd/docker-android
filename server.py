@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/open_telegram', methods=['POST'])
 def open_telegram():
     try:
-        # Replace 'Telegram' with the path to your Telegram executable
-        os.system("open -a Telegram")  # For macOS
-        # os.system("start telegram")  # For Windows
-        # os.system("telegram &")  # For Linux
+        # Reemplaza 'Telegram' con la ruta al ejecutable de Telegram en tu sistema
+        os.system("start telegram")  # Windows
+        # os.system("open -a Telegram")  # macOS
+        # os.system("telegram &")  # Linux
         return jsonify({'status': 'success', 'message': 'Telegram opened'})
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)})
