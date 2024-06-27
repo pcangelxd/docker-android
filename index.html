@@ -11,7 +11,7 @@
 
     <script>
         document.getElementById('openTelegramButton').addEventListener('click', function() {
-            fetch('/open_telegram', {
+            fetch('https://d1f6-181-176-72-231.ngrok-free.app', {  // Reemplaza con tu URL de ngrok
                 method: 'POST'
             })
             .then(response => response.json())
